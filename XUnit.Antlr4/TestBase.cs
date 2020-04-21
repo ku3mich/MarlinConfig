@@ -1,6 +1,6 @@
 ﻿using Xunit.Abstractions;
 
-namespace Clang.Tests
+namespace XUnit.Antlr4
 {
     public class TestBase
     {

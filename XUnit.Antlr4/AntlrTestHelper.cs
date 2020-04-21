@@ -1,8 +1,9 @@
 ﻿using Antlr4.Runtime;
+using Clang;
 using System.Linq;
 using Xunit.Abstractions;
 
-namespace Clang.Tests
+namespace XUnit.Antlr4
 {
     public class AntlrTestHelper
     {
@@ -13,11 +14,11 @@ namespace Clang.Tests
             OutputHelper = outputHelper;
         }
 
-        public ITokenStream CreateStream(string s)
+        public ITokenStream CreateStream(string text)
         {
-            OutputHelper.WriteLine(s);
+            OutputHelper.WriteLine(text);
 
-            var q = ClangHelper.CreateTokenStream(new AntlrInputStream(s));
+            var q = ClangHelper.CreateTokenStream(new AntlrInputStream(text));
             q.Fill();
 
             OutputHelper.WriteLine(
@@ -32,7 +33,6 @@ namespace Clang.Tests
                     .Select(s => s.Token == "EOL" ? $"EOL@{s.Line}\n" : s.Token)));
 
             return q;
-
         }
 
         public ClangParser CreateParser(ITokenStream s)

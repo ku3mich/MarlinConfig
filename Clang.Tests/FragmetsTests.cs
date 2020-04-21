@@ -1,10 +1,9 @@
-﻿using System;
-using Xunit;
+﻿using Xunit;
 using Xunit.Abstractions;
+using XUnit.Antlr4;
 
 namespace Clang.Tests
 {
-
     public class FragmetsTests : AntlrTest
     {
         

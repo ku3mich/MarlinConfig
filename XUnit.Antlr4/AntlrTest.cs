@@ -1,23 +1,8 @@
 ﻿using Clang;
 using Xunit.Abstractions;
 
-namespace Clang.Tests
+namespace XUnit.Antlr4
 {
-    /*
-    public class Collector : ClangParserBaseListener
-    {
-        public Collector()
-        {
-
-        }
-
-        public override void ExitDefine([NotNull] ClangParser.DefineContext context)
-        {
-            
-        }
-    }
-    */
-
     public class AntlrTest : TestBase
     {
         protected readonly AntlrTestHelper AntlrHelper;

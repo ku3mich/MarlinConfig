@@ -3,7 +3,7 @@ using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using Xunit.Abstractions;
 
-namespace Clang.Tests
+namespace XUnit.Antlr4
 {
     public class DebugListener : IParseTreeListener
     {

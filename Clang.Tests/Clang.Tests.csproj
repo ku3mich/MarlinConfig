@@ -31,6 +31,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Clang\Clang.csproj" />
+        <ProjectReference Include="..\XUnit.Antlr4\XUnit.Antlr4.csproj" />
     </ItemGroup>
 
     <ItemGroup>
