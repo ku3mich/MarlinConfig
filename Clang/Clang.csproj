@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Clang</RootNamespace>
+    </PropertyGroup>
+
+    <Import Project="$([MSBuild]::GetPathOfFileAbove(common.items))" />
+
+    <ItemGroup>
+        <None Include="UniCase.g" />
+        <Antlr4 Include="ClangLexer.g4">
+            <ForceAtn>false</ForceAtn>
+            <Abstract>false</Abstract>
+        </Antlr4>
+        <Antlr4 Include="ClangParser.g4">
+            <ForceAtn>false</ForceAtn>
+        </Antlr4>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Antlr4" Version="4.6.6">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.6.0.16497">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <!--<Compile Include="obj\**\*.cs">
+            <ExcludeFromSourceAnalysis>true</ExcludeFromSourceAnalysis>
+        </Compile>-->
+    </ItemGroup>
+</Project>

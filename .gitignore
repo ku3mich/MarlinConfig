@@ -1,0 +1,14 @@
+bin
+obj
+*.suo
+*.user
+_ReSharper.*
+*.DS_Store
+*.userprefs
+TestResults/*
+TestResult.xml
+StyleCop.Cache
+node_modules
+.vs
+.antlr
+

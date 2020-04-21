@@ -1,0 +1,19 @@
+﻿[*.cs]
+
+# CS3021: Type or member does not need a CLSCompliant attribute because the assembly does not have a CLSCompliant attribute
+dotnet_diagnostic.CS3021.severity = none
+
+# S2699: Tests should include assertions
+dotnet_diagnostic.S2699.severity = none
+
+# S112: General exceptions should never be thrown
+dotnet_diagnostic.S112.severity = none
+
+# IDE0040: Add accessibility modifiers
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:none
+
+# S1116: Empty statements should be removed
+dotnet_diagnostic.S1116.severity = none
+
+# S3925: "ISerializable" should be implemented correctly
+dotnet_diagnostic.S3925.severity = none
