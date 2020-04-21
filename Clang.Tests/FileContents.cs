@@ -6,12 +6,12 @@ using Xunit.Sdk;
 
 namespace Clang.Tests
 {
-    public class FileContents : DataAttribute
+    public class FileContentsAttribute : DataAttribute
     {
         private static string BaseFolder = AppDomain.CurrentDomain.BaseDirectory;
         private readonly string FileName;
 
-        public FileContents(string fileName)
+        public FileContentsAttribute(string fileName)
         {
             FileName = fileName;
         }

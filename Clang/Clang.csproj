@@ -27,8 +27,5 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <!--<Compile Include="obj\**\*.cs">
-            <ExcludeFromSourceAnalysis>true</ExcludeFromSourceAnalysis>
-        </Compile>-->
     </ItemGroup>
 </Project>

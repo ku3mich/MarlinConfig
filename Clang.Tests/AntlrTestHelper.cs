@@ -16,14 +16,19 @@ namespace Clang.Tests
         public ITokenStream CreateStream(string s)
         {
             OutputHelper.WriteLine(s);
-            var stream = new AntlrInputStream(s);
-            var lexer = new ClangLexer(stream);
-            var q = new CommonTokenStream(lexer);
+
+            var q = ClangHelper.CreateTokenStream(new AntlrInputStream(s));
             q.Fill();
+
             OutputHelper.WriteLine(
                 string.Join(" -> ",
                     q.GetTokens()
-                    .Select(s => new { Line = s.Line, Pos = s.Column, Token = lexer.Vocabulary.GetDisplayName(s.Type) })
+                    .Select(s => new
+                    {
+                        s.Line,
+                        Pos = s.Column,
+                        Token = ClangLexer.DefaultVocabulary.GetDisplayName(s.Type)
+                    })
                     .Select(s => s.Token == "EOL" ? $"EOL@{s.Line}\n" : s.Token)));
 
             return q;
@@ -35,7 +40,7 @@ namespace Clang.Tests
             var parser = new ClangParser(s);
             var l = new DebugListener(OutputHelper);
             parser.AddParseListener(l);
-            parser.AddErrorListener(new ErrorThrower());
+            parser.AddErrorListener(new SyntaxErrorThrower());
             return parser;
         }
     }
