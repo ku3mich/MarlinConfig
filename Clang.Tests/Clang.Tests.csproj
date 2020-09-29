@@ -6,7 +6,8 @@
     </PropertyGroup>
 
     <Import Project="$([MSBuild]::GetPathOfFileAbove(common.items))" />
-
+    <Import Project="$([MSBuild]::GetPathOfFileAbove(marlinConfigs.items))" />
+    
     <ItemGroup>
         <PackageReference Include="Antlr4" Version="4.6.6">
             <PrivateAssets>all</PrivateAssets>
@@ -32,6 +33,7 @@
     <ItemGroup>
         <ProjectReference Include="..\Clang\Clang.csproj" />
         <ProjectReference Include="..\XUnit.Antlr4\XUnit.Antlr4.csproj" />
+        <ProjectReference Include="..\XUnit.Extensions\XUnit.Extensions.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -50,20 +52,8 @@
       <None Update="samples\ifndef.h">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="samples\Marlin\v1\Configuration.h">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="samples\Marlin\v1\Configuration_adv.h">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="samples\Marlin\v2\Configuration.h">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="samples\Marlin\v2\Configuration_adv.h">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
       <None Update="samples\undef.h">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 </Project>

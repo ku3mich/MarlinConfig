@@ -1,0 +1,16 @@
+<Project>
+    <ItemGroup>
+      <None Include="..\MarlinConfigs\v1\Configuration.h" Link="samples\Marlin\v1\Configuration.h">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="..\MarlinConfigs\v1\Configuration_adv.h" Link="samples\Marlin\v1\Configuration_adv.h">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="..\MarlinConfigs\v2\Configuration.h" Link="samples\Marlin\v2\Configuration.h">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Include="..\MarlinConfigs\v2\Configuration_adv.h" Link="samples\Marlin\v2\Configuration_adv.h">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>

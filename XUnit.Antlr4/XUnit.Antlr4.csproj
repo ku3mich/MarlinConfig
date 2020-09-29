@@ -1,15 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    
+    <Import Project="$([MSBuild]::GetPathOfFileAbove(common.items))" />
 
-  <ItemGroup>
-    <PackageReference Include="xunit.abstractions" Version="2.0.3" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Clang\Clang.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Clang\Clang.csproj" />
+    </ItemGroup>
 
 </Project>

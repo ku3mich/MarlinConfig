@@ -1,6 +1,7 @@
 ﻿using Xunit;
 using Xunit.Abstractions;
 using XUnit.Antlr4;
+using XUnit.Core;
 
 namespace Clang.Tests
 {

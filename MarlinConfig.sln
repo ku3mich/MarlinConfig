@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarlinConfig.Tests", "Marli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Antlr4", "XUnit.Antlr4\XUnit.Antlr4.csproj", "{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Extensions", "XUnit.Extensions\XUnit.Extensions.csproj", "{0ECDDC85-B575-4AB4-AC3E-657979E45FED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

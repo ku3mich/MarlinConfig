@@ -4,7 +4,7 @@ using System.IO;
 using System.Reflection;
 using Xunit.Sdk;
 
-namespace Clang.Tests
+namespace XUnit.Core
 {
     public class FileContentsAttribute : DataAttribute
     {
