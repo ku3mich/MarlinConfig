@@ -1,5 +1,0 @@
-<Project>
-    <ItemGroup>
-       <None Include="$([MSBuild]::GetPathOfFileAbove(.editorconfig))" Link=".editorconfig" />
-    </ItemGroup>
-</Project>

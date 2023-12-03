@@ -79,8 +79,6 @@ namespace Clang.Tests
             Assert.Equal("1.1", f.Value);
         }
 
-
-
         [Fact]
         public void Include()
         {
@@ -178,7 +176,6 @@ namespace Clang.Tests
         {
         }
 
-        // #define TMC_ADV() {  }
         [Fact]
         public void IfExpr()
         {

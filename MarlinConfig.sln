@@ -1,11 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29920.165
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34321.82
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{790AEE4B-E28D-43B3-98FD-DFEA98840509}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeBlock", "CodeBlock\CodeBlock.csproj", "{76E9490A-3FA6-42B2-8C71-CBE535558E2A}"
@@ -16,13 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clang", "Clang\Clang.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clang.Tests", "Clang.Tests\Clang.Tests.csproj", "{9B1611C3-0F0B-4FA7-B4BF-2BC2477D1B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarlinConfig", "MarlinConfig\MarlinConfig.csproj", "{666020D7-874C-465B-B5E4-8C13C67355D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarlinConfig", "MarlinConfig\MarlinConfig.csproj", "{666020D7-874C-465B-B5E4-8C13C67355D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarlinConfig.Tests", "MarlinConfig.Tests\MarlinConfig.Tests.csproj", "{FF5A99BF-1E40-4C80-A53D-A5558C538C0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarlinConfig.Tests", "MarlinConfig.Tests\MarlinConfig.Tests.csproj", "{FF5A99BF-1E40-4C80-A53D-A5558C538C0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Antlr4", "XUnit.Antlr4\XUnit.Antlr4.csproj", "{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit.Extensions", "XUnit.Extensions\XUnit.Extensions.csproj", "{0ECDDC85-B575-4AB4-AC3E-657979E45FED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnit.Antlr4", "XUnit.Antlr4\XUnit.Antlr4.csproj", "{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,10 +57,6 @@ Global
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B55BAA72-B96E-4A53-8E57-4C0B7C5B2DBC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0ECDDC85-B575-4AB4-AC3E-657979E45FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

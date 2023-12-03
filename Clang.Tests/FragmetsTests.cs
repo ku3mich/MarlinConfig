@@ -1,30 +1,28 @@
 ﻿using Xunit;
 using Xunit.Abstractions;
+using Xunit.Include;
 using XUnit.Antlr4;
-using XUnit.Core;
 
 namespace Clang.Tests
 {
     public class FragmetsTests : AntlrTest
     {
-        
+
         public FragmetsTests(ITestOutputHelper output) : base(output)
         {
         }
 
         [Theory]
-        [FileContents("samples/Marlin/v1/Configuration.h")]
-        [FileContents("samples/Marlin/v1/Configuration_adv.h")]
-        [FileContents("samples/Marlin/v2/Configuration.h")]
-        [FileContents("samples/Marlin/v2/Configuration_adv.h")]
-        [FileContents("samples/ifndef.h")]
-        [FileContents("samples/if.h")]
-        [FileContents("samples/hello-world.c")]
-        [FileContents("samples/undef.h")]
-        [FileContents("samples/if-else.h")]
-        public void Parse(string text)
+        [ContentsOfFile("samples/Marlin/v2/Configuration.h")]
+        [ContentsOfFile("samples/Marlin/v2/Configuration_adv.h")]
+        [ContentsOfFile("samples/ifndef.h")]
+        [ContentsOfFile("samples/if.h")]
+        [ContentsOfFile("samples/hello-world.c")]
+        [ContentsOfFile("samples/undef.h")]
+        [ContentsOfFile("samples/if-else.h")]
+        public void Parse(ContentsOfFile file)
         {
-            var p = Prepare(text);
+            var p = Prepare(file);
             p.file();
         }
     }

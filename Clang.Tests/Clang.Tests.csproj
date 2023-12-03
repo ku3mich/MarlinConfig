@@ -1,11 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>Clang.Tests</RootNamespace>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
 
-    <Import Project="$([MSBuild]::GetPathOfFileAbove(common.items))" />
     <Import Project="$([MSBuild]::GetPathOfFileAbove(marlinConfigs.items))" />
     
     <ItemGroup>
@@ -14,17 +13,14 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.6.0.16497">
-          <PrivateAssets>all</PrivateAssets>
-          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="xunit" Version="2.4.1" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="xunit" Version="2.6.2" />
+        <PackageReference Include="Xunit.Include" Version="0.2.0" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="coverlet.collector" Version="1.2.1">
+        <PackageReference Include="coverlet.collector" Version="6.0.0">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
@@ -33,7 +29,6 @@
     <ItemGroup>
         <ProjectReference Include="..\Clang\Clang.csproj" />
         <ProjectReference Include="..\XUnit.Antlr4\XUnit.Antlr4.csproj" />
-        <ProjectReference Include="..\XUnit.Extensions\XUnit.Extensions.csproj" />
     </ItemGroup>
 
     <ItemGroup>
