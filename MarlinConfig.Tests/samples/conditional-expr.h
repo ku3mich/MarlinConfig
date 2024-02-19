@@ -1,0 +1,3 @@
+#if TEMP_SENSOR_REDUNDANT == 1000
+  #define REDUNDANT_PULLUP_RESISTOR_OHMS  4700 // Pullup resistor
+#endif

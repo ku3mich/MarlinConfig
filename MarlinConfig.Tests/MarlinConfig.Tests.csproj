@@ -7,9 +7,10 @@
 
   <Import Project="$([MSBuild]::GetPathOfFileAbove(marlinConfigs.items))" />
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-    <PackageReference Include="xunit" Version="2.6.2" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="xunit" Version="2.7.0" />
+    <PackageReference Include="Xunit.Include" Version="0.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -20,14 +21,46 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MarlinConfig.Parser\MarlinConfig.Parser.csproj" />
     <ProjectReference Include="..\MarlinConfig\MarlinConfig.csproj" />
-    <ProjectReference Include="..\XUnit.Antlr4\XUnit.Antlr4.csproj" />
+    <ProjectReference Include="..\Xunit.Extensions.Antlr4\Xunit.Extensions.Antlr4.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="samples\simpleDefine.h">
+    <None Update="samples\conditional-complex.h">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="samples\conditional-define.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\conditional-expr.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\Configuration.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\Configuration_adv.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\header-comment.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\long-define.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\motherboard.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="samples\single-line-comments.h">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="SonarAnalyzer.CSharp" Version="9.19.0.84025">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

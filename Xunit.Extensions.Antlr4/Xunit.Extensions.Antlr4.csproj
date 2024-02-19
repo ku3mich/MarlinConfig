@@ -3,11 +3,13 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
     </PropertyGroup>
-
+    
     <ItemGroup>
-      <ProjectReference Include="..\MarlinConfig.Parser\MarlinConfig.Parser.csproj" />
+        <PackageReference Include="Antlr4.Runtime" Version="4.6.6" />
+        <PackageReference Include="xunit.abstractions" Version="2.0.3" />
+        <PackageReference Include="Xunit.Extensions.DependencyInjection" Version="0.0.4" />
     </ItemGroup>
-
+    
     <ItemGroup>
       <PackageReference Update="SonarAnalyzer.CSharp" Version="9.19.0.84025">
         <PrivateAssets>all</PrivateAssets>

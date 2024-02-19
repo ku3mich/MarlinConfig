@@ -2,8 +2,10 @@
 
 namespace MarlinConfig
 {
+    public record ConfigValue(string? Value, bool Enabled);
+
     public class Configuration
     {
-        public Dictionary<string, string> Defines = new Dictionary<string, string>();
+        public Dictionary<string, ConfigValue> Values { get; set; } = [];
     }
 }
